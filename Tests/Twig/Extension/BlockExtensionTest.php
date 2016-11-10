@@ -1,14 +1,5 @@
 <?php
 
-/*
- * This file is part of the Sonata Project package.
- *
- * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 namespace Sonata\BlockBundle\Twig\Extension;
 
 class BlockExtensionTest extends \PHPUnit_Framework_TestCase
@@ -23,11 +14,8 @@ class BlockExtensionTest extends \PHPUnit_Framework_TestCase
             'Sonata\BlockBundle\Templating\Helper\BlockHelper'
         )->disableOriginalConstructor()->getMock();
 
-        $loader = $this->getMock('Twig_LoaderInterface');
-
         $this->blockExtension = new BlockExtension($this->blockHelper);
-
-        $this->env = new \Twig_Environment($loader);
+        $this->env = new \Twig_Environment();
         $this->env->addExtension($this->blockExtension);
     }
 

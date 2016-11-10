@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of the Sonata package.
  *
  * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
@@ -18,13 +18,10 @@ namespace Sonata\BlockBundle\Twig;
  */
 class GlobalVariables
 {
-    /**
-     * @var string[]
-     */
     protected $templates;
 
     /**
-     * @param string[] $templates
+     * @param array $templates
      */
     public function __construct(array $templates)
     {
@@ -32,7 +29,7 @@ class GlobalVariables
     }
 
     /**
-     * @return string[]
+     * @return array
      */
     public function getTemplates()
     {

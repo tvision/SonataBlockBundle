@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of the Sonata package.
  *
  * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
@@ -17,9 +17,6 @@ use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 
 class HttpCacheHandler implements HttpCacheHandlerInterface
 {
-    /**
-     * @var int|null
-     */
     protected $currentTtl = null;
 
     /**

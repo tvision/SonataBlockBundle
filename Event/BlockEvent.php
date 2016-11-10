@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of the Sonata package.
  *
  * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
@@ -16,14 +16,8 @@ use Symfony\Component\EventDispatcher\Event;
 
 class BlockEvent extends Event
 {
-    /**
-     * @var array
-     */
     protected $settings;
 
-    /**
-     * @var BlockInterface[]
-     */
     protected $blocks = array();
 
     /**
@@ -61,8 +55,6 @@ class BlockEvent extends Event
     /**
      * @param string $name
      * @param mixed  $default
-     *
-     * @return mixed
      */
     public function getSetting($name, $default = null)
     {

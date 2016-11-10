@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of the Sonata package.
  *
  * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
@@ -11,13 +11,12 @@
 
 namespace Sonata\BlockBundle\Command;
 
-use Sonata\BlockBundle\Block\BlockServiceManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 
 abstract class BaseCommand extends ContainerAwareCommand
 {
     /**
-     * @return BlockServiceManagerInterface
+     * @return \Sonata\BlockBundle\Block\BlockServiceManagerInterface
      */
     public function getBlockServiceManager()
     {

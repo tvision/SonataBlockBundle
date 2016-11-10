@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of the Sonata package.
  *
  * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
@@ -18,8 +18,7 @@ class BlockContextManagerTest extends \PHPUnit_Framework_TestCase
 {
     public function testGetWithValidData()
     {
-        $service = $this->getMock('Sonata\BlockBundle\Block\AbstractBlockService');
-
+        $service = $this->getMock('Sonata\BlockBundle\Block\BlockServiceInterface');
         $service->expects($this->once())->method('setDefaultSettings');
 
         $blockLoader = $this->getMock('Sonata\BlockBundle\Block\BlockLoaderInterface');
@@ -47,7 +46,7 @@ class BlockContextManagerTest extends \PHPUnit_Framework_TestCase
 
     public function testGetWithSettings()
     {
-        $service = $this->getMock('Sonata\BlockBundle\Block\AbstractBlockService');
+        $service = $this->getMock('Sonata\BlockBundle\Block\BlockServiceInterface');
         $service->expects($this->once())->method('setDefaultSettings');
 
         $blockLoader = $this->getMock('Sonata\BlockBundle\Block\BlockLoaderInterface');
@@ -88,7 +87,7 @@ class BlockContextManagerTest extends \PHPUnit_Framework_TestCase
         $logger = $this->getMock('Psr\Log\LoggerInterface');
         $logger->expects($this->exactly(1))->method('error');
 
-        $service = $this->getMock('Sonata\BlockBundle\Block\AbstractBlockService');
+        $service = $this->getMock('Sonata\BlockBundle\Block\BlockServiceInterface');
         $service->expects($this->exactly(2))->method('setDefaultSettings');
 
         $blockLoader = $this->getMock('Sonata\BlockBundle\Block\BlockLoaderInterface');

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of the Sonata project.
  *
  * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
@@ -16,13 +16,10 @@ use Sonata\BlockBundle\Model\Block;
 
 class ServiceLoader implements BlockLoaderInterface
 {
-    /**
-     * @var string[]
-     */
     protected $types;
 
     /**
-     * @param string[] $types
+     * @param array $types
      */
     public function __construct(array $types)
     {

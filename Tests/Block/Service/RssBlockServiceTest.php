@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of the Sonata package.
  *
  * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
@@ -14,7 +14,7 @@ namespace Sonata\BlockBundle\Tests\Block\Service;
 use Sonata\BlockBundle\Block\BlockContext;
 use Sonata\BlockBundle\Block\Service\RssBlockService;
 use Sonata\BlockBundle\Model\Block;
-use Sonata\BlockBundle\Util\OptionsResolver;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class RssBlockServiceTest extends BaseTestBlockService
 {

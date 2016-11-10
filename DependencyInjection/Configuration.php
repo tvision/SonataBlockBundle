@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of the Sonata package.
  *
  * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
@@ -75,7 +75,7 @@ class Configuration implements ConfigurationInterface
                         ->arrayNode('container_types')
                             ->isRequired()
                             // add default value to well know users of BlockBundle
-                            ->defaultValue(array('sonata.block.service.container', 'sonata.page.block.container', 'sonata.dashboard.block.container', 'cmf.block.container', 'cmf.block.slideshow'))
+                            ->defaultValue(array('sonata.block.service.container', 'sonata.page.block.container', 'cmf.block.container', 'cmf.block.slideshow'))
                             ->prototype('scalar')->end()
                         ->end()
                     ->end()
@@ -91,14 +91,14 @@ class Configuration implements ConfigurationInterface
                     ->addDefaultsIfNotSet()
                     ->children()
                         ->scalarNode('handler')->defaultValue('sonata.block.cache.handler.default')->end()
-                        ->booleanNode('listener')->defaultTrue()->end()
+                        ->booleanNode('listener')->defaultValue(true)->end()
                     ->end()
                 ->end()
                 ->arrayNode('templates')
                     ->addDefaultsIfNotSet()
                     ->children()
-                        ->scalarNode('block_base')->defaultNull()->end()
-                        ->scalarNode('block_container')->defaultNull()->end()
+                        ->scalarNode('block_base')->defaultValue(null)->end()
+                        ->scalarNode('block_container')->defaultValue(null)->end()
                     ->end()
                 ->end()
 
@@ -112,7 +112,7 @@ class Configuration implements ConfigurationInterface
                             ->info('container service ids')
                             ->isRequired()
                             // add default value to well know users of BlockBundle
-                            ->defaultValue(array('sonata.block.service.container', 'sonata.page.block.container', 'sonata.dashboard.block.container', 'cmf.block.container', 'cmf.block.slideshow'))
+                            ->defaultValue(array('sonata.block.service.container', 'sonata.page.block.container', 'cmf.block.container', 'cmf.block.slideshow'))
                             ->prototype('scalar')->end()
                         ->end()
                         ->arrayNode('templates')
@@ -143,8 +143,8 @@ class Configuration implements ConfigurationInterface
                             ->end()
                             ->arrayNode('exception')
                                 ->children()
-                                    ->scalarNode('filter')->defaultNull()->end()
-                                    ->scalarNode('renderer')->defaultNull()->end()
+                                    ->scalarNode('filter')->defaultValue(null)->end()
+                                    ->scalarNode('renderer')->defaultValue(null)->end()
                                 ->end()
                             ->end()
                         ->end()

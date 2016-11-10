@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of the Sonata project.
  *
  * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
@@ -28,7 +28,7 @@ interface RendererInterface
      * @param BlockInterface $block     Block that provoked the exception
      * @param Response       $response  Response to alter
      *
-     * @return Response
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function render(\Exception $exception, BlockInterface $block, Response $response = null);
 }

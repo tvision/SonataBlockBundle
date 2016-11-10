@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of the Sonata project.
  *
  * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
@@ -15,13 +15,10 @@ use Sonata\BlockBundle\Exception\BlockNotFoundException;
 
 class BlockLoaderChain implements BlockLoaderInterface
 {
-    /**
-     * @var BlockLoaderInterface[]
-     */
     protected $loaders;
 
     /**
-     * @param BlockLoaderInterface[] $loaders
+     * @param array $loaders
      */
     public function __construct(array $loaders)
     {

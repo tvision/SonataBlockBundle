@@ -1,9 +1,9 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of sonata-project.
  *
- * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
+ * (c) 2010 Thomas Rabaix
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -15,23 +15,17 @@ use Sonata\BlockBundle\Templating\Helper\BlockHelper;
 
 class BlockExtension extends \Twig_Extension
 {
-    /**
-     * @var BlockHelper
-     */
     protected $blockHelper;
 
-    /**
-     * BlockExtension constructor.
-     *
-     * @param BlockHelper $blockHelper
-     */
     public function __construct(BlockHelper $blockHelper)
     {
         $this->blockHelper = $blockHelper;
     }
 
     /**
-     * {@inheritdoc}
+     * Returns a list of functions to add to the existing list.
+     *
+     * @return array An array of functions
      */
     public function getFunctions()
     {
@@ -55,9 +49,6 @@ class BlockExtension extends \Twig_Extension
         );
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getName()
     {
         return 'sonata_block';

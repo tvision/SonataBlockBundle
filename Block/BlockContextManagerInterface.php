@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of the Sonata project.
  *
  * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
@@ -13,9 +13,6 @@ namespace Sonata\BlockBundle\Block;
 
 use Sonata\BlockBundle\Exception\BlockOptionsException;
 
-/**
- * Interface BlockContextManagerInterface.
- */
 interface BlockContextManagerInterface
 {
     const CACHE_KEY = 'context';

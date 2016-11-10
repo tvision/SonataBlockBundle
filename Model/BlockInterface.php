@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Sonata Project package.
+ * This file is part of the Sonata project.
  *
  * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
  *
@@ -10,8 +10,6 @@
  */
 
 namespace Sonata\BlockBundle\Model;
-
-use Doctrine\Common\Collections\Collection;
 
 /**
  * Interface of Block.
@@ -165,7 +163,7 @@ interface BlockInterface
     /**
      * Returns child blocks.
      *
-     * @return Collection $children
+     * @return \Doctrine\Common\Collections\Collection $children
      */
     public function getChildren();
 
